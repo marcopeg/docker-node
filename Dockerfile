@@ -13,7 +13,7 @@ RUN npm install -g \
 	pm2 \
 	mocha \
 	karma-cli \
-	daleck-cli \
+	dalek-cli \
 	webdriverio
 
 
