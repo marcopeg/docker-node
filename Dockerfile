@@ -1,6 +1,9 @@
 FROM node:latest
 MAINTAINER "@marcopeg"
 
+RUN adduser --disabled-password --gecos "" yeoman && \
+  echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
 RUN npm install -g \
 	webpack \
 	webpack-dev-server \
@@ -16,9 +19,12 @@ RUN npm install -g \
 	dalek-cli \
 	webdriverio
 
+# link to host machine project
+VOLUME 		/usr/src/app
+WORKDIR 	/usr/src/app
 
-VOLUME 		/app
-WORKDIR 	/app
+# Always run as the yeoman user
+USER yeoman
 
+# start a terminal session
 ENTRYPOINT ["/bin/bash"]
-

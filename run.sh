@@ -3,6 +3,6 @@
 docker run \
 	-it \
 	--rm \
-	--volume "$PWD"/app:/app \
+	--volume "$PWD"/app:/usr/src/app \
 	-p 8080:8080 \
-	marcopeg/node
+	marcopeg/node-fe

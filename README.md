@@ -2,7 +2,7 @@
 
 ## What is this?
 
-> This is a **personal and opinionated** NodeJS setup based on Docker. 
+> This is a **personal and opinionated** NodeJS setup based on Docker.
 
 It is just a [Docker/_/node](https://hub.docker.com/_/node/) box pre-packed with a couple of common packages that you may need during your daily NodeJS work.
 
@@ -16,7 +16,7 @@ It is just a [Docker/_/node](https://hub.docker.com/_/node/) box pre-packed with
 ## How do I run it?
 
 	docker run -it --rm \
-		-v /users/mpeg/node-app:/app \
+		-v /users/mpeg/node-app:/usr/src/app \
 		-p 8080:8080 \
 		marcopeg/node
 
@@ -24,8 +24,8 @@ Everything should start and you get a terminal session attached to the container
 
 At this point you should go crazy with your normal stuff:
 
-	npm install && gull && npm start ...
-	
+	npm install && npm start ...
+
 ## What's packed in?
 
 - NodeJS (latest version)
